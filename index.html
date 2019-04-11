@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <title>Responsi IDB  </title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="serviceworker.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <img src="/images/ugm.png" class="img" alt="logo ugm">
+            <h3>Tabel obat</h3>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Tambahkan Obat
+            </div>
+            <div class="card-body">
+                <form id="form-tambah">
+                    <div class="form-group">
+                        <label >Kode</label>
+                        <input type="text" class="form-control" id="kode_obat" placeholder="Kode">
+                    </div>
+                    <div class="form-group">
+                        <label >Nama</label>
+                        <input type="text" class="form-control" id="nama_obat" placeholder="Nama">
+                    </div>
+                    <div class="form-group">
+                        <label >Jumlah</label>
+                        <input type="number" class="form-control" id="jumlah_obat" placeholder="Jumlah">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                Tabel Obat
+            </div>
+            <table id="tabel-obat" class="table-hover table table-bordered">
+                <thead>
+                <tr>
+                    <th>KODE</th>
+                    <th>NAMA</th>
+                    <th>JUMLAH</th>
+                    <th>OPTION</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
