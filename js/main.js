@@ -36,7 +36,7 @@ var tabel = document.getElementById('tabel-obat'),
     form = document.getElementById('form-tambah'),
     nama_obat = document.getElementById('nama_obat'),
     kode_obat = document.getElementById('kode_obat'),
-    jumlah_obat = document.getElementById('jumlah_obat');
+    harga_obat = document.getElementById('harga_obat');
 
     form.addEventListener('submit', tambahBaris);
 
@@ -51,7 +51,7 @@ function tambahBaris(e){
     insertKeDB({
         kode_obat : kode_obat.value,
         nama_obat : nama_obat.value,
-        jumlah_obat : jumlah_obat.value,
+        harga_obat : harga_obat.value,
     });
 
     //modifikasi tabel menggunakan fungsi apppendChild()
@@ -59,7 +59,7 @@ function tambahBaris(e){
     baris.id = kode_obat.value; // => <tr id="123"></tr>
     baris.insertCell().appendChild(document.createTextNode(kode_obat.value)); //=> <td>123</td>
     baris.insertCell().appendChild(document.createTextNode(nama_obat.value));
-    baris.insertCell().appendChild(document.createTextNode(jumlah_obat.value));
+    baris.insertCell().appendChild(document.createTextNode(harga_obat.value));
 
     //button
     var btn = document.createElement('input'); // <input type="button" value="hapus">
@@ -99,7 +99,7 @@ function bacaDariDB (){
             baris.id = result.value.kode_obat; // => <tr id="123"></tr>
             baris.insertCell().appendChild(document.createTextNode(result.value.kode_obat)); //=> <td>123</td>
             baris.insertCell().appendChild(document.createTextNode(result.value.nama_obat));
-            baris.insertCell().appendChild(document.createTextNode(result.value.jumlah_obat));
+            baris.insertCell().appendChild(document.createTextNode(result.value.harga_obat));
 
             //button
             var btn = document.createElement('input'); // <input type="button" value="hapus">
